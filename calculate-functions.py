@@ -16,6 +16,17 @@ def avg(*args):
     return sum(args) / len(args)
 
 
+# multiple return statements depending on conditions
+def check_even_odd(number):
+    if number % 2 == 0:
+        return "even"
+    else:
+        return "odd"
+
+
+def find_min_max(numbers):
+    return min(numbers), max(numbers)
+
 # Tests
 a = 10
 b = 20
@@ -49,3 +60,11 @@ purchase2 = add_numbers(price_book, price_movie)
 purchase3 = add_numbers(price_book, price_movie)
 
 print(f"Der Mittelwert aller Einkäufe ist: {average(purchase1, purchase2, purchase3)}.")
+
+print(f"5 is {check_even_odd(5)}.")
+print(f"6 is {check_even_odd(6)}.")
+
+list_of_numbers = [1, 2, 3, 4, 5, 6]
+minimum, maximum = find_min_max(list_of_numbers)
+
+print(f"In der Liste{list_of_numbers} ist die kleinste Zahl {minimum}, die größte Zahl {maximum}.")
